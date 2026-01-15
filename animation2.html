@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tulisan + Lingkaran Bolak-Balik</title>
+
+<style>
+    /* ===== Lingkaran bolak-balik di atas teks ===== */
+    .circle-wrapper {
+        width: 100%;
+        padding: 15px 0;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    /* GRADIENT KEREN */
+    background: radial-gradient(circle at 30% 30%, #ffe98a, #ffb300);
+
+    /* GLOW EFEK CAHAYA */
+    box-shadow:
+        0 0 10px #ffde59,
+        0 0 20px #ffde59,
+        0 0 35px #ffde59;
+
+    position: relative;
+    animation: bolakBalik 3s ease-in-out infinite alternate;
+    }
+    @keyframes bolakBalik {
+        0%   { left: -45%; }
+        100% { left: 45%; }
+    }
+
+    /* ===== Tulisan berjalan ===== */
+    .marquee {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: #1a1f36;
+        color: #ffffff;
+        padding: 12px 0;
+        font-family: Verdana;
+        font-size: 20px;
+        border-top: 2px solid #000000;
+    }
+    .marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: berjalan 10s linear infinite;
+    }
+    @keyframes berjalan {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Lingkaran di luar kotak teks -->
+<div class="circle-wrapper">
+    <div class="circle"></div>
+</div>
+
+<!-- Kotak tulisan berjalan -->
+<div class="marquee">
+    <span>Selamat datang di website saya — Tulisan berjalan dengan lingkaran bolak-balik di atasnya!</span>
+</div>
+
+</body>
+</html>

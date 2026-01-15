@@ -1,0 +1,102 @@
+/* ==== GLOBAL STYLE ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==== FORM CARD ==== */
+form {
+    width: 450px;
+    padding: 30px 35px;
+    border-radius: 18px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+    animation: fadeIn 0.7s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== LABEL ==== */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* ==== INPUT, SELECT, TEXTAREA ==== */
+input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+
+    transition: 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, .6);
+}
+
+/* ==== RADIO & CHECKBOX ==== */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    accent-color: #4f46e5; /* warna tombol modern */
+}
+
+/* ==== BUTTON ==== */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin-top: 10px;
+
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

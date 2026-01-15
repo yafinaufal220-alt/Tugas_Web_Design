@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tugas Grid Layout</title>
+<style>
+/* -------------------------------------- */
+/* 1. Global Reset & Typography */
+/* -------------------------------------- */
+body {
+    /* Menggunakan font stack modern */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9; /* Latar belakang halaman yang terang */
+    color: #333;
+}
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------------------- */
+/* 2. Grid Container Layout */
+/* -------------------------------------- */
+.container {
+    max-width: 1200px; /* Batasi lebar maksimum */
+    margin: 20px auto; /* Tengahkan container */
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    /* Ukuran sidebar 250px, konten sisanya (1fr) */
+    grid-template-columns: 250px 1fr;
+    gap: 15px; /* Jarak antar elemen */
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Style dasar untuk semua area grid */
+.container div {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan yang halus */
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------------- */
+/* 3. Header & Navbar (Flexbox) */
+/* -------------------------------------- */
+.header {
+    grid-area: header;
+    /* Menggunakan Flexbox untuk menyusun konten header */
+    display: flex;
+    justify-content: space-between; /* Jauhkan logo dan navigasi */
+    align-items: center; /* Pusatkan secara vertikal */
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1c3d70, #0a1f44); /* Gradient biru tua profesional */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px 8px 0 0;
+}
+
+.header .logo {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Style untuk Navbar (menu kanan) */
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* Efek hover underline modern */
+.main-nav a:hover {
+    color: #a8c1e4;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: #a8c1e4;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* -------------------------------------- */
+/* 4. Menu (Sidebar) */
+/* -------------------------------------- */
+.menu {
+    grid-area: menu;
+    text-align: left;
+    background-color: #f8f9fa; /* Warna latar belakang sidebar yang berbeda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menu a {
+    /* Style tombol sidebar yang lebih bersih */
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #343a40;
+    font-weight: normal;
+    border-radius: 4px;
+    background: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    position: static; /* Menghapus properti dari style lama */
+    animation: none; /* Menghapus properti dari style lama */
+}
+
+.menu a:hover {
+    background-color: #e9ecef;
+    color: #007bff; /* Warna hover biru cerah */
+    transform: translateX(3px); /* Efek geser kecil */
+    box-shadow: none;
+}
+
+/* -------------------------------------- */
+/* 5. Content */
+/* -------------------------------------- */
+.content {
+    grid-area: content;
+    line-height: 1.6;
+}
+
+.content h2 {
+    color: #1c3d70;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------- */
+/* 6. Footer */
+/* -------------------------------------- */
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    background-color: #e9ecef;
+    box-shadow: none;
+    border-radius: 0 0 8px 8px;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #1c3d70; margin-bottom: 20px; font-weight: 300;">Modern CSS Grid & Flexbox</h1>
+
+<div class="container">
+    <div class="header">
+        <h1 class="logo">FASCO</h1>
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Profile</a>
+            <a href="#">Service</a>
+        </nav>
+  </div>
+
+    <div class="menu">
+    <h4>Menu </h4>
+    <a href="#">Dashboard Analytics</a>
+    <a href="#">Client Management</a>
+    <a href="https://www.youtube.com/watch?v=Ne6hcWoWzDo&t=838s">Video Guide Link</a>
+    <a href="#">System Settings</a>
+  </div>
+
+    <div class="content">
+    <h2>Meningkatkan Kualitas dan Efisiensi Desain Web</h2>
+    <p style="text-align: justify;">Template ini dirancang sebagai fondasi yang solid untuk aplikasi web profesional. Kami mengintegrasikan CSS Grid untuk tata letak halaman utama yang tangguh dan Flexbox untuk penyelarasan elemen-elemen di dalam komponen seperti Navbar. Pendekatan ini memastikan desain yang responsif dan terstruktur dengan baik.</p>
+    <p style="text-align: justify;">Setiap bagian, mulai dari tipografi yang bersih, skema warna yang kohesif (dominan biru tua dan putih), hingga efek hover yang halus, bertujuan untuk menciptakan pengalaman pengguna yang profesional dan intuitif. Kami berfokus pada hierarki visual yang jelas untuk memudahkan navigasi dan konsumsi informasi.</p>
+  </div>
+
+    <div class="footer">
+    <p>&#169; 2025 FASCO Professional Web. All Rights Reserved.</p>
+  </div>
+</div>
+
+</body>
+</html>

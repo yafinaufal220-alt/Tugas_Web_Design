@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Yafi' Naufal Riadi</title>
+
+    <style>
+        /* ===================================================== */
+        /* 1. VARIABLE WARNA (LIGHT/DARK MODE)                   */
+        /* ===================================================== */
+        :root {
+    --bg: #f7f7f7;
+    --text: #131313;
+    --card: #ffffff;
+
+    /* Biru baru yang lebih soft */
+    --accent: #4f7ca8;      /* biru soft elegan */
+    --accent2: #bd9a5f;     /* gold soft */
+    --subtext: #555;
+}
+
+.dark {
+    --bg: #0e0e0e;
+    --text: #f7f7f7;
+    --card: #1a1a1a;
+
+    /* Versi gelap biru soft */
+    --accent: #7baad6;
+    --accent2: #e3c88a;
+    --subtext: #bbb;
+}
+
+        /* ===================================================== */
+        /* GLOBAL STYLE                                          */
+        /* ===================================================== */
+     .skills span {
+    display: inline-block;
+    background: var(--accent);       /* biru mengelilingi tombol */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+
+    /* Bayangan elegan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: .2s ease;
+}
+
+/* Hover: bayangan lebih naik */
+.skills span:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+    transform: translateY(-2px);
+}
+
+/* Klik: tombol sedikit turun */
+.skills span:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Verdana", sans-serif;
+            transition: .3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background: var(--card);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--accent2);
+        }
+
+        #modeBtn {
+            padding: 10px 25px;
+            border: 2px solid var(--accent2);
+            background: transparent;
+            cursor: pointer;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s ease;
+            color: var(--accent2);
+        }
+
+        #modeBtn:hover {
+            background: var(--accent2);
+            color: #fff;
+        }
+
+        /* ===================================================== */
+        /* HERO SECTION                                           */
+        /* ===================================================== */
+        .card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+
+    /* Tambahkan border biru di seluruh kotak */
+    border: 2px solid var(--accent);
+}
+
+        .hero {
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            gap: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: var(--subtext);
+        }
+
+        .section {
+            padding: 50px;
+        }
+
+
+
+        h2 {
+            font-size: 26px;
+            color: var(--accent2);
+            margin-bottom: 15px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        /* Foto Profil */
+        .hero-photo img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===================================== -->
+    <!-- HEADER -->
+    <!-- ===================================== -->
+    <header>
+        <div class="logo">CV</div>
+        <button id="modeBtn">Dark Mode</button>
+    </header>
+
+    <!-- ===================================== -->
+    <!-- HERO SECTION -->
+    <!-- ===================================== -->
+    <section class="hero">
+
+        <div class="hero-photo">
+            <img src="download.png" alt="Foto Profil"/>
+        </div>
+
+        <div class="hero-text">
+            <h1>Yafi' Naufal Riadi</h1>
+            <p>Future Software Developer</p>
+        </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- ABOUT -->
+    <!-- ===================================== -->
+    <div class="section">
+
+        <div class="card">
+            <h2>Tentang Saya</h2>
+            <p style="text-align: justify;">
+                Saya adalah mahasantri PeTIK Jombang yang fokus pada Pengembangan Perangkat Lunak dengan minat besar pada teknologi modern, pemrograman, dan desain antarmuka. Saya suka mempelajari hal baru, membangun proyek kecil untuk mengasah kemampuan, dan menciptakan solusi digital yang rapi, efisien, serta mudah digunakan.
+Dengan semangat belajar dan kedisiplinan, saya terus mengembangkan diri untuk menjadi seorang software developer yang kompeten dan berintegritas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Pendidikan</h2>
+            <ul style="margin-left: -0.5cm;">
+                <li>SD - SDN Kerkep (2013–2019)</li><br>
+                <li>SMP - SMPIT Nurul Izzah (2019–2022)</li><br>
+                <li>SMA - SMAN 1 Gurah (2022–2025)</li><br>
+                <li>Kuliah - PeTIK II Jombang (2025–Sekarang)</li><br>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Pengalaman</h2>
+            <p>Belum memiliki pengalaman magang resmi.</p>
+        </div>
+
+        <div class="card">
+            <h2>Keahlian</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>UI/UX</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Kontak</h2>
+            <p>Email: yafinaufal220@gmail.com</p>
+            <p>No. HP: 085645870978</p>
+        </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- JAVASCRIPT MODE SWITCH -->
+    <!-- ===================================== -->
+    <script>
+        const btn = document.getElementById("modeBtn");
+        
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            btn.textContent = document.body.classList.contains("dark")
+                ? "Light Mode"
+                : "Dark Mode";
+        });
+    </script>
+
+</body>
+</html>
